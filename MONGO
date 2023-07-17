@@ -1,0 +1,85 @@
+User Schema   ------------------------------
+
+
+{ 
+ userId: userId, 
+ firstName: String, 
+  lastName: String
+email: String, 
+ password: String, 
+dateOfBirth: Date, 
+ residence:[ { 
+ houseNumber: String, 
+city: String, 
+ postalCode: String, 
+ country: String 
+} ], 
+ phoneNumber: String, 
+ profileImage: String, 
+createdAt: Date, 
+ updatedAt: Date 
+ }
+
+
+
+
+
+
+session_collection  -------------------------------------------
+
+{ 
+"session_id": "session_id", 
+ "userId": "user_id", 
+"token": "session_token", 
+"expiresAt": ("date") 
+ }
+
+
+// comment schema  ---------------------------------------
+
+{  userId: user_id, 
+commentId = comment_id 
+postId: user_id, 
+‘ secUserId: user_id, 
+ content: String, 
+ createdAt: Date, 
+ updatedAt: Date 
+} 
+
+
+
+// likes schema  -------------------------------------------------
+
+ { 
+userId: user_id, 
+postId: post_id, 
+secUserId: user_id, 
+ createdAt: Date 
+}
+
+
+
+
+post_collection  --------------------------------------------
+
+ { 
+"post_id":"post_id", 
+"userId": "user_id", 
+ "content": "String", 
+"createdAt": "DATE", 
+ "actions": [ 
+
+ {  "userId":"user_id", 
+
+  "comment_Id":"comment_id", 
+  "type": "comment", 
+ "content": " String", 
+createdAt": "DATE " 
+ }, 
+ { 
+ "userId":"user_id", 
+ "type": "like", 
+"createdAt": "DATE"  } ] }
+
+
+
